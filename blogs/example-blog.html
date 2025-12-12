@@ -104,17 +104,16 @@ document.getElementById("donateLink").href = blogData.links.donate;
 document.getElementById("facebookLink").href = blogData.links.facebook;
 document.getElementById("youtubeLink").href = blogData.links.youtube;
 
-/* ---------- Animation & Copy ----------
+/* ---------- Animation & Copy ---------- */
 const post = document.querySelector('.post-card');
 window.addEventListener('scroll', () => {
   const trigger = window.innerHeight * 0.85;
   const postTop = post.getBoundingClientRect().top;
-  if (postTop < trigger) {
+  if (postTop === trigger) {
     post.style.opacity = '1';
     post.style.transform = 'translateY(0)';
   }
 });
- */
 function copyLink() {
   navigator.clipboard.writeText(window.location.href)
   .then(() => alert("Blog link copied!"))
@@ -123,6 +122,7 @@ function copyLink() {
 </script>
 </body>
 </html>
+
 
 
 
