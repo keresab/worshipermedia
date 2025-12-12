@@ -104,14 +104,12 @@ document.getElementById("youtubeLink").href = blogData.links.youtube;
 
 /* ---------- Animation & Copy ---------- */
 const post = document.querySelector('.post-card');
-window.addEventListener('scroll', () => {
-  const trigger = window.innerHeight;
-  const postTop = post.getBoundingClientRect().top;
-  if (postTop < trigger) {
-    post.style.opacity = '1';
-    post.style.transform = 'translateY(0)';
-  }
+
+window.addEventListener('DOMContentLoaded', () => {
+  post.style.opacity = '1';
+  post.style.transform = 'translateY(0)';
 });
+
 
 function copyLink() {
   navigator.clipboard.writeText(window.location.href)
@@ -121,3 +119,4 @@ function copyLink() {
 </script>
 </body>
 </html>
+
