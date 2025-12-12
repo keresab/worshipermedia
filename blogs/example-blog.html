@@ -56,18 +56,16 @@
 <script>
 /* ---------- Blog Content Object ---------- */
 const blogData = {
-  pageTitle: "Who is Jesus?",
-  title: "How To Love God",
-  subtitle: "A timeless question. Explore the life, teachings, and meaning of Jesus Christ",
+  pageTitle: "how to ------?",
+  title: "how to or etc",
+  subtitle: "A timeless question.",
   sections: [
-    "Jesus of Nazareth, also known as Jesus Christ, is the central figure of Christianity. Born over 2000 years ago, his teachings, life, and crucifixion have profoundly shaped human history.",
-    "Christians believe Jesus is the Son of God and the awaited Messiah prophesied in the Old Testament. His teachings emphasized love, compassion, forgiveness, and the importance of faith.",
-    "Parables and miracles recorded in the Gospels illustrate moral lessons and spiritual truths. Beyond religious texts, Jesus remains a significant historical figure, whose philosophy of love and humility has influenced cultures, ethics, art, and society worldwide.",
-    "Understanding Jesus’ life and message can inspire reflection on morality, purpose, and compassion in everyday life, transcending time and place."
+    "this is example",
+    "this is also example"
   ],
   author: {
-    name: "Written by Jeremy",
-    date: "October 31, 2025",
+    name: "Written by kenaket",
+    date: "nov 12, 2025",
     image: "../worship medialogo.jpg"
   },
   links: {
@@ -107,13 +105,14 @@ document.getElementById("youtubeLink").href = blogData.links.youtube;
 /* ---------- Animation & Copy ---------- */
 const post = document.querySelector('.post-card');
 window.addEventListener('scroll', () => {
-  const trigger = window.innerHeight * 0.85;
+  const trigger = window.innerHeight;
   const postTop = post.getBoundingClientRect().top;
-  if (postTop === trigger) {
+  if (postTop < trigger) {
     post.style.opacity = '1';
     post.style.transform = 'translateY(0)';
   }
 });
+
 function copyLink() {
   navigator.clipboard.writeText(window.location.href)
   .then(() => alert("Blog link copied!"))
@@ -122,7 +121,3 @@ function copyLink() {
 </script>
 </body>
 </html>
-
-
-
-
